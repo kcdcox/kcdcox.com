@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require("fs");
-var exports = module.exports = {};
 
 const dict1 = path.join(
     path.dirname(process.mainModule.filename), 'data', 'dict.txt'

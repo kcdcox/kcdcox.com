@@ -1,4 +1,4 @@
 node_modules
 .DS_Store
 kcdcox.code-workspace
-/client
+PrivateKeys.json
