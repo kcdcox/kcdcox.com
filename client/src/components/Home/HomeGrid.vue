@@ -2,7 +2,7 @@
 <b-container fluid id="homeGrid">
   <!--=================================================SPECIALTY TAG=======-->
   <b-row class="turqBg" id="specialty">
-		<a id="about"></a>
+		<a href="#about" v-smooth-scroll></a><div id="about"></div>
     <b-col cols="12" class="cntrTxt">
       <h1 class="cab white fw6 fs22vw" id="speTxt">
         Freelance Web Developer & Designer based out of British Columbia, Canada.
@@ -17,7 +17,7 @@
 
     <b-col cols="12" sm="6" class="cntrTxt">
 			
-      <h1 class="mont drkGrey fw5 fs22" id="aboutme">
+      <h1 class="mont drkGrey fw5 fs22 px-3" id="aboutme">
         Hi, I'm Kevin :) I'm a perpetually curious, critical thinker, 
         with a passion for design and development
       </h1>
@@ -259,6 +259,7 @@ export default {
 .speBr {display: inline;}
 /*=================================SHORT-BIO=========*/
 #aboutRow {
+	display: flex;
 	height: 55vh;}
 #aboutme {
 	width: 85%;
@@ -270,7 +271,6 @@ export default {
 	width: 45vh;
 	height: auto;
 	object-fit: contain;
-	left: 5vh;
 	top: 4%;}
 /*=====================================SKILLS & TOOLS==*/
 .skills {
@@ -321,12 +321,11 @@ export default {
 	h1.split {font-size: +5vw;}
 	h2.split {font-size: +4vw;}
 	h3.split {font-size: +2vw;}
-	.Me { left: auto; right: 3vw}
 	.logo {height: 18vw;}
 	.logoBox {top: 20px;}
 	#dezLogo, #devLogo { width: 13vw; height: 13vw;}
 	#myTools1, #myTools2 {display: block !important;}
-	#cartoonMe { left: calc((100% - 45vh)/2);}
+	/* #cartoonMe { left: calc(50vw - (45vh/2));} */
 	#left, #right {
 		border: 1px solid #BCBCBC;
 		height: auto;

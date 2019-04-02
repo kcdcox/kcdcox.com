@@ -4,51 +4,56 @@
     v-on:mouseleave="navup=true" 
     :style="{height: (navup) ? '55px':'188px'}">
 
-    <router-link to="/" v-if="hamout==false">
-      <img src="../images/logo/kclogoWGP.png" class="Me">
-      <img src="../images/logo/kclogoWPG.png" class="Me ontop">
+    <router-link to="/">
+      <img src="../images/logo/kclogoWGP.png" 
+        class="Me" :class="{imageRight: 
+        hamout,imageLeft:(!hamout)}">
+      <img src="../images/logo/kclogoWPG.png" 
+        class="Me ontop"  
+        :class="{imageRight: hamout,imageLeft:(!hamout)}">
     </router-link>
 
     <div id="hamburger" 
-      :style="{display: (hamout) ? 'block' : 'none'}"
-      v-on:click="navup = !navup">
-
-      <svg xmlns="http://www.w3.org/2000/svg" id="ham" viewBox="0 0 500 500">
-        <line x1="29" y1="32.8" x2="472"  y2="32.8" fill="none" stroke="#fff"
-          stroke-linecap="round" stroke-miterlimit="10" stroke-width="49"
-        ></line>
-        <line x1="29"  y1="173"  x2="472" y2="173" fill="none" stroke="#fff"
-          stroke-linecap="round" stroke-miterlimit="10" stroke-width="49"
-        ></line>
-        <line
-          x1="29" y1="313.2" x2="472" y2="313.2" fill="none" stroke="#fff" 
-          stroke-linecap="round" stroke-miterlimit="10" stroke-width="49"
-        ></line>
-      </svg>
-
+      @click="navup = !navup"
+      :style="{display: (hamout) ? 'block' : 'none'}">
+      <div id="ham-icon" :class="{open:(!navup)}">
+        <span></span><span></span><span></span>
+      </div>
     </div>
 
     <div class="nav-bar-links">
       <ul>
-        <li class="nav-item" :class="{'nav-item-up': navup,'nav-item-down': !navup}">
-          <router-link to="/#about" @click="navup=!navup" 
-          class="nav-link" :style="{display: navLinks}">
+        <li class="nav-item" 
+          @click="navup=true"
+          :class="{'nav-item-up': navup,'nav-item-down': !navup}">
+          <router-link to="/#about"
+            v-smooth-scroll
+            @click="navup=!navup" 
+            class="nav-link" 
+            :style="{display: navLinks}">
             About
           </router-link>
         </li>
-        <li class="nav-item" :class="{'nav-item-up': navup,'nav-item-down': !navup}">
-          <router-link to="/work" @click="navup=!navup"
-              class="nav-link" active-class="active" 
-              :style="{display: navLinks}"> 
-            Work
+        <li class="nav-item" 
+          :class="{'nav-item-up': navup,'nav-item-down': !navup}"
+          @click="navup=true">
+          <router-link to="/projects" 
+            @click="navup=!navup"
+            class="nav-link" active-class="active" 
+            :style="{display: navLinks}"> 
+            Projects
           </router-link>
         </li>
-        <li class="nav-item" :class="{'nav-item-up': navup,'nav-item-down': !navup}">
-          <router-link to="/contact" @click="navup=!navup"
-              class="nav-link" active-class="active"
-              :style="{display: navLinks}">
+        <li class="nav-item" 
+          :class="{'nav-item-up': navup,'nav-item-down': !navup}"
+          @click="navup=true">
+          <a href="#contact" 
+            v-smooth-scroll 
+            @click="navup=!navup"
+            class="nav-link" active-class="active" 
+            :style="{display: navLinks}"> 
             Contact
-          </router-link>
+          </a>
         </li>
       </ul>
     </div>
@@ -120,54 +125,91 @@ export default {
   opacity: 0.9;
   margin: 0;
   -webkit-transition: height 0.2s ease; 
-  transition: height 0.2s ease;
-}
-.Me,
-#hamburger {
+  transition: height 0.2s ease;}
+/* ====================LOGO======= */
+.Me {
   position: fixed;
   height: 40px;
   opacity: 0.85;
   width: auto;
-  left: 15px;
   top: 8px;
   z-index: 4000;
-  overflow: hidden;
-}
-.ontop {
-  opacity: 0;
-}
-.ontop:hover {
-  opacity: 1;
-}
+  overflow: hidden;}
+.ontop {opacity: 0;}
+.ontop:hover {opacity: 1;}
+.imageLeft{
+  left: 15px;
+  right: initial;}
+.imageRight{
+  left: initial;
+  right: 15px;}
+/* ====================HAMBURGER======= */
 #hamburger {
+  opacity: 0.8;
   position: fixed;
+  z-index: 100;
   top: 13px;
-  height: 40px;
-  width: 40px;
-  display: none;
-}
-#ham {
-  position: relative;
-  top: 0;
+  left: 15px;
+  height: 30px;
+  width: 45px;
+  display: none;}
+#ham-icon {
+  margin: 0;
+  top:0;
   left: 0;
-  opacity: 0.85;
-  width: 40px;
-  height: 40px;
-}
+  z-index: 10;
+  padding: 0; 
+  width: 45px;
+  height: 30px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;}
+#ham-icon span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 0.8;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;}
+#ham-icon span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;}
+#ham-icon span:nth-child(2) {
+  top: 12px;
+  transform-origin: left center;}
+#ham-icon span:nth-child(3) {
+  top: 24px;
+  transform-origin: left center;}
+
+#ham-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;}
+#ham-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;}
+#ham-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 30px;
+  left: 8px;}
+/* ====================LINKS======= */
 .nav-bar-links{
   position: fixed;
   left: 0;
-  top: 0;
-}
+  top: 0;}
 .nav-item-up {
   position: relative;
   display: inline-block;
   top: 11px;
-  left: 65px;
+  left: 60px;
   width: 90px;
   margin: 0;
-  padding: 0;
-}
+  padding: 0;}
 .nav-item-down {
   position: relative;
   display: block;
@@ -176,8 +218,7 @@ export default {
   left: -25px;
   width: 90px;
   margin: 10px;
-  padding: 0;
-}
+  padding: 0;}
 .nav-link {
   display: inline-block;
   font-family: "Cabin", sans-serif;
@@ -187,12 +228,10 @@ export default {
   color: #ffffff;
   text-decoration: none;
   margin: 0;
-  padding: 0;
-}
+  padding: 0;}
 .nav-link:hover,
 .nav-link.active {
   opacity: 1;  
   font-weight: 700;
-  color: #4ea792;
-}
+  color: #4ea792;}
 </style>

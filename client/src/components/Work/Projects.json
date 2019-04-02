@@ -1,0 +1,15 @@
+[
+  {
+    "url":"findwords-card",
+    "title":"Scrabble Word Finder",
+    "text":"This application recieves letters as input, searches the dictionary, and returns all words matching the given input. Filtering and sorting functionality is included. The front-end is built with Vue.js, while the back-end is built using Node.js and Express.js.",
+    "link":"/findWords"
+  },
+  {
+    "url":"kcdcox-card",
+    "title":"www.kcdcox.com",
+    "text":" This website acts as my my portfolio and reference--for freelance work. The front-end is built with HTML, CSS, Javascript Bootstrap, and Vue.js, while the back-end is connected via Node.js and Express.js.",
+    "link":"/"
+  }
+ 
+]

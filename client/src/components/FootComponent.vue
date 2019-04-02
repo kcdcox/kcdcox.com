@@ -37,25 +37,27 @@
 		<!--==================================================CIRCLE-ICONS================-->
 		<b-row class="footIcons">
 
+			<a href="#contact" v-smooth-scroll></a><div id="contact"></div>
+
 			<div class="conIconCont">
 				<div class="purpCircle">
 					<a href="https://www.linkedin.com/in/kcdcox">
-						<img src="../images/icons/contIconsW-03.png" class="ftIco">
-						<img src="../images/icons/contIconsG-03.png" class="ftIco ontop">
+						<img src="../images/icons/contIconsG-03.png" class="ftIco">
+						<img src="../images/icons/contIconsW-03.png" class="ftIco ontop">
 					</a>
 				</div>
 
 				<div class="purpCircle">
 					<a href="https://www.instagram.com/kcdcox/">
-						<img src="../images/icons/contIconsW-04.png" class="ftIco">
-						<img src="../images/icons/contIconsG-04.png" class="ftIco ontop">
+						<img src="../images/icons/contIconsG-04.png" class="ftIco">
+						<img src="../images/icons/contIconsW-04.png" class="ftIco ontop">
 					</a>
 				</div>
 
 				<div class="purpCircle">
 					<a href="mailto:kcdcox@gmail.com?Subject=Hello" target="_top">
-						<img src="../images/icons/contIconsW-05.png" class="ftIco">
-						<img src="../images/icons/contIconsG-05.png" class="ftIco ontop">
+						<img src="../images/icons/contIconsG-05.png" class="ftIco">
+						<img src="../images/icons/contIconsW-05.png" class="ftIco ontop">
 					</a>
 				</div>
 			</div>
@@ -64,9 +66,13 @@
 		<!-- =================================================LOGO-DATE=============== -->
 		<b-row class="logoBox">
 			<img src="../images/logo/kclogoWBP.png" class="footLog">
-			<h3 class="mont fw3 fs14p drkGrey copyR">
+			<h3 class="mont fw7 fs14p purp copyR">
 				Kevin Cox &#169; TwentyEighteen
 			</h3>
+		</b-row>
+
+		<b-row id="googleMap">
+				<GoogleMap name="map"></GoogleMap>
 		</b-row>
 
   </b-row>
@@ -81,10 +87,12 @@ import Vue from "vue";
 import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import GoogleMap from "./GoogleMap";
 Vue.use(BootstrapVue);
 
 export default {
-  name: 'FootComponent'
+	name: 'FootComponent',
+	components: { GoogleMap },
 };
 </script>
 <!--=================================================================================-->
@@ -95,10 +103,20 @@ export default {
   position:relative;
   height:450px;
   width: 100%;
+	z-index: 10;
   left: 0;
   margin: 0;
   padding: 0;
   overflow: visible !important; }
+#googleMap{
+	position: absolute;
+	z-index: -2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;}
 .nav-panel {
   position: absolute;
   width: 100%;
@@ -107,7 +125,6 @@ export default {
   padding: 0;
   left: 0;
   top: 0;
-  background-color: #4EA792;
   overflow: visible !important;}
 .dark-panel {
 	height: auto;
@@ -159,8 +176,8 @@ export default {
 	border-radius: 50px;
 	border: 2px solid white;
 	transition: background-color 0.5s ease;
-	background-color: none;}
-.purpCircle:hover { background-color: #8961A0;}
+	background-color: #8961A0;}
+.purpCircle:hover { background-color: #4EA792;}
 .ftIco {
 	position: absolute;
 	width: 40%;
@@ -220,7 +237,7 @@ export default {
 	.conIconCont {
 		width: 260px;
 		height: 100px;
-		left: calc(50% - 120px);}
+		left: calc(50% - 130px);}
 	.purpCircle {
 		width: 60px;
 		height: 60px;

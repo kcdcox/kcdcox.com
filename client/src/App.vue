@@ -16,7 +16,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import vueSmoothScroll from 'vue2-smooth-scroll'
+Vue.use(vueSmoothScroll)
 Vue.use(BootstrapVue);
 
 import NavComponent from './components/NavComponent.vue'
@@ -33,7 +34,7 @@ export default {
 <!--=====================================================================STYLING=====-->
 <!--=================================================================================-->
 <style>
-@import url("https://fonts.googleapis.com/css?family=BenchNine:300|Cabin:400,600,700|Quicksand:500,700|Lato:300,400,400italic,600,700|Roboto:400,500,700|Montserrat:100,200,400|Nunito:400,600,700|Raleway:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=BenchNine:300|Cabin:400,700|Quicksand:500,700|Lato:300,400,400italic,600,700|Roboto:400,500,700|Montserrat:100,200,400|Nunito:400,600,700|Raleway:300,400,500,600,700");
 html{ 
   font-size: 62.5%;
   overflow: scroll;
@@ -72,12 +73,9 @@ html{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 200;}
 /*========================COLOURS==========*/
-.turq {
-	color: #4EA792 !important;}
-.purp {
-	color: #8961A0 !important;}
-.white {
-	color: #fff;}
+.turq {color: #4EA792 !important;}
+.purp {color: #8961A0 !important;}
+.white {color: #fff;}
 .drkGrey {color: #323232CC;}
 .grey {color: grey;}
 .lightGrey {color: #BCBCBC;}

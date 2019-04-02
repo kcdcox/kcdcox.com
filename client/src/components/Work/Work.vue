@@ -7,27 +7,6 @@
       <img class="currArtDisp" title="">
     </div>
   </div>
-
-  <!--=====================================TOGGLE-ART-BAR==================-->
-  <!-- <b-row id="togglez">
-
-    <b-col class="riTxt">
-      <h1 class="rale drkGrey fw7 fs26">Design</h1>
-      <div class="diviBorderR"></div>
-      <h1 class="btnz" id="iconB" @click=" ">Icons</h1>
-      <h1 class="btnz" id="illoB">Illustrations</h1>
-      <h1 class="btnz on" id="allBtn">All</h1>
-    </b-col>
-
-    <b-col class="lfTxt">
-      <h1 class="rale drkGrey fw7 fs26">Development</h1>
-      <div class="diviBorderL"></div>
-      <h1 class="btnz on">More</h1>
-      <h1 class="btnz">Coming</h1>
-      <h1 class="btnz">Soon</h1>
-    </b-col>
-
-  </b-row> -->
   <!--===============================================================ALL-WORK-->
   <b-row class="allWork">
 
@@ -39,34 +18,18 @@
        <!--=========================================================DEV-CARDS-->
       <b-row align-h="center">
 
-        <b-col cols="12" lg="6" class="card-col mb-5">
-          <router-link to="/findwords">
-            <div class="card-div ">
-              <img class="card-image" src="../../images/backgrounds/findwords-card.jpg">
-              <div class="card-text-div py-0 px-3">
-                <h2 class="card-heading mt-3 mb-2 fs18 rale fw6">Scrabble Word Finder</h2>
-                <p class="card-text fs14 mont fw4">
-                  This application recieves letters as input, searches the dictionary, and returns all words matching the given input. Filtering and sorting functionality is included. The front-end is built with Vue.js, while the back-end is built using Node.js and Express.js.
-                </p>
-              </div>
-            </div>
+        <b-col cols="12" lg="6" 
+          class="card-col mb-5" 
+          v-for="value in Projects" 
+          :key="value.index">
+          <router-link :to="value.link">
+            <project-card 
+                :url="value.url"
+                :title="value.title"
+                :text="value.text">
+            </project-card>
           </router-link>
         </b-col>
-
-        <b-col cols="12" lg="6" class="card-col mb-5">
-          <router-link to="/">
-            <div class="card-div">
-              <img class="card-image" src="../../images/backgrounds/kcdcox-card.jpg">
-              <div class="card-text-div py-0 px-3">
-                <h2 class="card-heading mt-3 mb-2 fs18 rale fw6">www.kcdcox.com</h2>
-                <p class="card-text fs14 mont fw4">
-                  This website acts as my my portfolio and reference--for freelance work. The front-end is built with HTML, CSS, Javascript Bootstrap, and Vue.js, while the back-end is connected via Node.js and Express.js.
-                </p>
-              </div>
-            </div>
-          </router-link>
-        </b-col>
-
 
       </b-row>
       <!--===========================================================DESIGN-->
@@ -155,12 +118,15 @@
 <!--=============================================================================-->
 <script>
 import Slick from 'vue-slick';
+import ProjectCard from './ProjectCard.vue';
+import projez from './Projects.json';
 
 export default {
   name: "WorkGrid",
-  components: { Slick },
+  components: { Slick, ProjectCard },
   data() {
     return{
+      Projects: projez,
 			width: window.innerWidth,
       height: window.innerHeight,
 			infoH: '0',
@@ -258,35 +224,6 @@ export default {
 .labels{overflow: visible;}
 .spaceX{height: 20vh;}
 #togglez{ overflow: visible !important;}
-.card-div{
-  position: relative;
-  margin: 0;
-  height: 55vh;
-  min-height: 330px;
-  padding: 0;
-  width: 100%;
-  background:#323232;
-  border-radius: 2vh !important;
-  border: 1px solid black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden !important;
-}
-.card-div:hover{ box-shadow: 0 4px 8px 0 #8A648CFF;}
-.card-image{
-  position: relative;
-  width: 100%;
-  height: auto;}
-.card-text-div{
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  top: 60%;
-  left: 0;
-  background:#323232;
-  height: 41%;
-  }
-.card-heading{color: #4EA792 !important;}
-.card-text{color: white !important;}
 /*===========================DIVIDERS==*/
 .diviBorderR,
 .diviBorderL{

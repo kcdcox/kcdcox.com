@@ -6,9 +6,9 @@
       <img
         src="../../images/backgrounds/forest-me.jpg"
         :style="{ height: forestH +'px', 
-                    width: forestW +'px', 
-                    left: forestL +'px',
-                    top: forestT + 'px'}"
+                  width: forestW +'px', 
+                  left: forestL +'px',
+                  top: forestT + 'px'}"
         id="forMe"
       >
     </div>
@@ -21,8 +21,8 @@
     <div class="starBg" :style="{top: starsT + 'px'}">
       <img src="../../images/backgrounds/1.jpg" 
 			:style="{ height: starsH +'px', 
-                    width: starsW +'px', 
-                    left: starsL +'px'}"
+                width: starsW +'px', 
+                left: starsL +'px'}"
 			id="purpStarz">
     </div>
     <!--====================================================BUBBLE-SCROLL======-->
@@ -138,7 +138,7 @@ export default {
 .firstlook,
 .tagline {
   position: fixed;
-  z-index: -3;
+  z-index: -10;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -201,6 +201,7 @@ export default {
 .b3 {top: 40%;}
 .b4 {top: 60%;}
 .b5 {top: 80%;}
+
 .scrlArrowz {
   position: absolute;
   height: 100px;
@@ -235,12 +236,12 @@ export default {
 	font-size: 14px;
 }
 #scrD2 {
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 #scrD3 {
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 @keyframes mymove1 {
   0% {top: -30px;left: 23px;width: 14px;opacity: 0;}

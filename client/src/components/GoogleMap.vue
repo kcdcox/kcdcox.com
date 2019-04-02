@@ -5,9 +5,8 @@
       :center="center"
       :zoom="8"
       :options="mapStyle"
-      style="width:100%; height: calc(100vh - 55px); top:55px;"
-    > </gmap-map>
-    <div class="fit"></div>
+      style="position: absolute; left: -10%; width:120%;  height: 130%; top:-15%; z-index: -3;">
+    </gmap-map>
   </div>
 </template>
 
@@ -183,12 +182,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.fit{
-  height: 55px;
-}
-google-map{
-  width: 100%;
-  height: 100vh !important;
-}
-</style>
