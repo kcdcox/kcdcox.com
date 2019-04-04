@@ -15,7 +15,7 @@ export default {
   name: "GoogleMap",
   data() {
     return {
-      center: {lat: 49.2, lng: -122.36},
+      center: {lat: 48.9, lng: -123.9},
       mapStyle: {styles: [
           {
             "featureType": "administrative",

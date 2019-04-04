@@ -24,7 +24,7 @@
         </b-col>
 
         <b-col cols="0" xl="4">
-          <router-link to="/work" class="nav-link">
+          <router-link to="/projects" class="nav-link">
             <h1 class="wrkT2 white mont fw7">
               See My<br>Portfolio
             </h1>
@@ -66,7 +66,7 @@
 		<!-- =================================================LOGO-DATE=============== -->
 		<b-row class="logoBox">
 			<img src="../images/logo/kclogoWBP.png" class="footLog">
-			<h3 class="mont fw7 fs14p purp copyR">
+			<h3 class="mont fw7 fs14p black copyR">
 				Kevin Cox &#169; TwentyEighteen
 			</h3>
 		</b-row>

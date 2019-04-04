@@ -10,10 +10,10 @@
   <!--===============================================================ALL-WORK-->
   <b-row class="allWork">
 
-    <b-col cols="10" offset="1">
+    <b-col cols="12" md="10" offset-md="1">
       <!--========================================================DEVELOPMENT-->
       <b-row class="labels">
-        <h1 class="bCat rale drkGrey fw7 my-4">Development</h1>
+        <h1 class="bCat rale drkGrey fw7 my-5">Development</h1>
       </b-row>
        <!--=========================================================DEV-CARDS-->
       <b-row align-h="center">
@@ -150,7 +150,8 @@ export default {
 						settings: {
 							centerMode: true,
 							centerPadding: '40px',
-							slidesToShow: 4
+              slidesToShow: 4,
+              arrows: false,
 						}
 					},
 					{
@@ -185,7 +186,8 @@ export default {
             settings: {
               centerMode: true,
               centerPadding: '40px',
-              slidesToShow: 2
+              slidesToShow: 2,
+              arrows: false,
             }
           },
           {
@@ -264,8 +266,9 @@ export default {
 .on{
 	background-color: #8961A0 !important;
   color: white;}
-.bCat{
-  left: -20px;
+.bCat{left: -20px;}
+@media screen and (max-width: 767px) {
+  .bCat{ left: 0px;}
 }
 /*=============================FOCUSES-IMAGE=================*/
 .Xicon{
@@ -299,4 +302,5 @@ export default {
 	height: 100%;
 	margin: 0 auto;
 	object-fit: contain;}
+
 </style>
