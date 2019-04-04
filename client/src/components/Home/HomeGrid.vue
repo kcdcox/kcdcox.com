@@ -111,41 +111,21 @@
 		:style="{height:(width<784)?infoH*2-0.5*height+'px':infoH-0.4*height+'px'}">
 	</b-row>
 
-	<b-row class="allWWork" id="recent-work">
+	<b-row class="allWWork"  align-h="center" id="recent-work">
 
-		<b-col cols="10" offset="1">
+		<h1 class="cCat cab cntrTxt drkGrey fw7 my-5 py-5">Most Recent Work</h1>
 
-			<b-row class="labels">
-				<h1 class="cCat cab cntrTxt drkGrey fw7 m10">Most Recent Work</h1>
-			</b-row>
-
-			<b-row class="labels icon">
-				<h1 class="cat lfTxt rale turq fs30 fw6 m16">
-					Icons
-				</h1>
-				<h1 class="cat riTxt rale purp fs24 fw6 m16">
-					Camping Set
-				</h1>
-			</b-row>
-
-			<b-row class="carousel icon">
-				<section class="iconSlider icon">
-
-					<slick ref="slick" :options="slickOptions">
-						<div><img class="wGI" src="../../images/icons/backpack-icon.jpg"></div>
-						<div><img class="wGI" src="../../images/icons/hatchet-icon.jpg"></div>
-						<div><img class="wGI" src="../../images/icons/tent-icon.jpg"></div>
-						<div><img class="wGI" src="../../images/icons/flashlight-icon.jpg"></div>
-						<div><img class="wGI" src="../../images/icons/waterbottle-icon.jpg"></div>
-						<div><img class="wGI" src="../../images/icons/knife-icon.jpg"></div>
-					</slick>
-
-				</section>
-			</b-row>
-
-			<b-row class="underSlider"></b-row>
-		
+		<b-col cols="10" lg="8" xl="5" class="card-col mb-5">
+			<router-link :to="Projects[0].link">
+				<project-card 
+						:url="Projects[0].url"
+						:title="Projects[0].title"
+						:text="Projects[0].text">
+				</project-card>
+			</router-link>
 		</b-col>
+			
+		<b-row class="underSlider"></b-row>
 
 	</b-row>
 
@@ -155,13 +135,15 @@
 <!--=====================================================================SCRIPTS=====-->
 <!--=================================================================================-->
 <script>
-import Slick from 'vue-slick';
+import ProjectCard from '../Projects/ProjectCard.vue';
+import projez from '../Projects/Projects.json';
 
 export default {
 	name: "HomeGrid",
-	components: { Slick },
+	components: { ProjectCard },
   data() {
     return{
+			Projects: projez,
 			width: window.innerWidth,
       height: window.innerHeight,
 			infoH: '0',

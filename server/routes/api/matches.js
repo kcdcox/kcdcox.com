@@ -10,4 +10,4 @@ router.get('/', async (req, res) => {
     res.send(await words);
 });
 
-module.exports = router;
+module.exports = router; 

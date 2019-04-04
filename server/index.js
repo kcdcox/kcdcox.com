@@ -7,14 +7,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-//Findwords
+//Findwords Routes
 const matches = require('./routes/api/matches');
 app.use('/api/matches', matches);
 
-//Relativator
-const relativator = require('./routes/api/relativator');
+//Relativator Routes
+const relativator = require('./routes/api/relationships');
 app.use('/api/relativator', relativator);
-
 
 //For Deployment Only
 //app.use(express.static(__dirname + '/public/'));

@@ -65,7 +65,7 @@
 		</b-row>
 		<!-- =================================================LOGO-DATE=============== -->
 		<b-row class="logoBox">
-			<img src="../images/logo/kclogoWBP.png" class="footLog">
+			<img src="../images/logo/kclogoBWP.png" class="footLog">
 			<h3 class="mont fw7 fs14p black copyR">
 				Kevin Cox &#169; TwentyEighteen
 			</h3>

@@ -21,6 +21,7 @@ Vue.use(BootstrapVue);
 
 import NavComponent from './components/NavComponent.vue'
 import FootComponent from './components/FootComponent.vue'
+
 export default {
   name: 'app',
   components: {

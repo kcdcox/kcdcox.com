@@ -1,12 +1,22 @@
 const axios = require('axios');
 
-const url = 'api/matches/';
+const findWordsURL = 'api/matches/';
+const relativatorURL = 'api/relativator/';
 
-class WordService {
+class Service {
 
     // Find Words
     static findWords(letters) {
-        return axios.get(url, {
+        return axios.get(findWordsURL, {
+            params: {
+                letters
+            }
+        });
+    }
+
+    // Relativator
+    static relativitor(letters) {
+        return axios.get(relativatorURL, {
             params: {
                 letters
             }
@@ -15,4 +25,4 @@ class WordService {
     
 }
 
-export default WordService;
+export default Service;

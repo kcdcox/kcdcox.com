@@ -49,7 +49,7 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden !important;
 }
-.card-div:hover{ box-shadow: 0 4px 8px 0 #8A648CFF;}
+.card-div:hover{ box-shadow: 0 4px 8px 0 black;}
 .card-image{
   background: no-repeat center top;
   background-size: cover;

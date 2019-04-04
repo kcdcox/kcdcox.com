@@ -1,12 +1,5 @@
 <template>
 <b-container fluid id="work">
-  <!--=====================================SINGLE-PAGE-VIEW================-->
-  <div class="singleArt">
-    <img src="../../images/icons/X-09-09.svg" class="Xicon">
-    <div class="singleArtCont">
-      <img class="currArtDisp" title="">
-    </div>
-  </div>
   <!--===============================================================ALL-WORK-->
   <b-row class="allWork">
 
@@ -203,9 +196,6 @@ export default {
         ]
       }
     }
-  }, 
-  methods: {
-
   }
 }
 </script>
