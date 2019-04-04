@@ -1,28 +1,26 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
 const app = express();
 
 //Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
+//Findwords
 const matches = require('./routes/api/matches');
 app.use('/api/matches', matches);
 
-//Handle Production
-if (process.env.NODE_ENV === 'production') {
-    //static folder
-    app.use(express.static(__dirname + '/public/'));
-    //Handle SPA
-    app.get(/.*/, (req, res) => res.sendFile(__direname + '/public/index.html'));
-}
+//Relativator
+const relativator = require('./routes/api/relativator');
+app.use('/api/relativator', relativator);
 
-const port = process.env.PORT || 5003;
 
-app.listen(port, () =>
-    console.log(`Server started on port ${port}`));
+//For Deployment Only
+//app.use(express.static(__dirname + '/public/'));
+//app.get(/.*/, (req, res) => res.sendFile(__direname + '/public/index.html'));
+
+app.listen(5003, () => console.log("Server listening on port 5003"));
 
 
 

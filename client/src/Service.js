@@ -1,7 +1,6 @@
 const axios = require('axios');
 
-//const url = 'http://localhost:5003/api/matches/';//localhost
-const url = 'api/matches/';//production
+const url = 'api/matches/';
 
 class WordService {
 

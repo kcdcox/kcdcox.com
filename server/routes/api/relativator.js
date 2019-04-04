@@ -1,8 +1,7 @@
 const express = require('express');
-//const mongodb = require('mongodb');
 
 const router = express.Router();
-const logic = require('../../logic/Findwords');
+const logic = require('../../logic/Relativator');
 
 // Find Words
 router.get('/', async (req, res) => {

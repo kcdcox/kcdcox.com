@@ -109,7 +109,7 @@
 <!--=================================================================================-->
 <script>
 
-import WordService from "../../WordService";
+import WordService from "../../Service";
 
 export default {
   name: "WordComponent",
