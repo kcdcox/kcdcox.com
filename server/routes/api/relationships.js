@@ -1,14 +1,11 @@
 const express = require('express');
-
 const router = express.Router();
-const logic = require('../../logic/Relativator');
+
+const logic = require('../../functions/Relativator');
 
 //Relativator
-router.get('/products', async (req, res) => {
-    console.log(req.query);
-    res.send({
-        products: []
-    });
+router.get('/', async (req, res) => {
+    const relation = logic.getRelationship(req.query.wordOne, req.query.wordTwo);
+    res.send(await relation);
 });
-
-module.exports = router;
+module.exports = router; 

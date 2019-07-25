@@ -1,8 +1,8 @@
-import Vue from 'vue'
+import Vue from '../node_modules/vue'
 import App from './App.vue'
-import VueRouter from 'vue-router';
-import Slick from 'vue-slick';
-import * as VueGoogleMaps from "vue2-google-maps";
+import VueRouter from '../node_modules/vue-router';
+import Slick from '../node_modules/vue-slick';
+import * as VueGoogleMaps from '../node_modules/vue2-google-maps';
 import { routes } from './routes.js';
 var PrivateKeys = require('../PrivateKeys.json'); 
 Vue.use(VueRouter);

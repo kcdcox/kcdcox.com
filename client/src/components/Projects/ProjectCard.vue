@@ -1,13 +1,13 @@
 <template>
   <div class="card-div">
     <div class="card-image" :style="{ backgroundImage: 'url('+ image +')'}"></div>
-      <div class="card-text-div py-2 px-3">
-        <h2 class="card-heading mt-3 mb-2 fs18 rale fw6">{{title}}</h2>
-        <p class="card-text fs14 mont fw4">
-          {{text}}
-        </p>
-      </div>
+    <div class="card-text-div py-2 px-3">
+      <h2 class="card-heading mt-3 mb-2 fs18 rale fw6">{{title}}</h2>
+      <p class="card-text fs14 mont fw4">
+        {{text}}
+      </p>
     </div>
+  </div>
 </template>
 <!--=============================================================================-->
 <!--=================================================================SCRIPTS=====-->
@@ -43,13 +43,12 @@ export default {
   min-height: 330px;
   padding: 0;
   width: 100%;
-  background:#323232;
-  border-radius: 2vh !important;
-  border: 1px solid black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden !important;
-}
-.card-div:hover{ box-shadow: 0 4px 8px 0 black;}
+  background:white;
+  border-radius: 5px !important;
+  border: 1px solid #00000055;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  overflow: hidden !important;}
+.card-div:hover{ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);}
 .card-image{
   background: no-repeat center top;
   background-size: cover;
@@ -62,11 +61,11 @@ export default {
   width: 100%;
   bottom: 0px;
   left: 0;
-  background:#323232;
+  background: white;
   vertical-align: middle;
   height: auto;
   min-height: 35%;
   }
 .card-heading{color: #4EA792 !important;}
-.card-text{color: white !important;}
+.card-text{color: #000000EE !important;}
 </style>

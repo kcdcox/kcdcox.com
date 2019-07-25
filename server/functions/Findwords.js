@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require("fs");
 
 const dict1 = path.join(
-    path.dirname(process.mainModule.filename), 'logic', 'dict.txt'
+    path.dirname(process.mainModule.filename), 'functions', 'dict.txt'
 );
 
 const finder = [

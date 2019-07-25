@@ -26,7 +26,7 @@
         <b-col cols="0" xl="4">
           <router-link to="/projects" class="nav-link">
             <h1 class="wrkT2 white mont fw7">
-              See My<br>Portfolio
+              See My<br>Projects
             </h1>
           </router-link>
         </b-col>
@@ -100,8 +100,9 @@ export default {
 <!--=================================================================================-->
 <style>
 #footer{
-  position:relative;
+  position: relative;
   height:450px;
+	top: 0;
   width: 100%;
 	z-index: 10;
   left: 0;

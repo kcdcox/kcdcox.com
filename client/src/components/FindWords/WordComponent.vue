@@ -24,7 +24,7 @@
           </b-input-group>
         </b-form-group>
 
-        <p class="fs18 white" v-if="(letters.length==0)">Enter up to 14 letters with '?' for blanks.</p>
+        <p class="fs18 white" v-if="(letters.length==0)">Enter up to 14 letters, with up to 2 '?' for blanks.</p>
         <p class="fs18 white" v-else>
           {{checkChars.slice(0,checkChars.length - 1)}} and
           {{parseInt(checkChars.slice(checkChars.length-1, checkChars.length))}}
@@ -80,7 +80,7 @@
             <h4 class="word-head mb-4 mt-0 pt-0 white">{{size + 2}} Letter Words</h4>
             <div class="table-div" scrolling="no" seamless="seamless">
               <b-table
-                class="word-table"
+                class="word-table mb-5"
                 hover
                 outlined
                 bordered
@@ -109,7 +109,7 @@
 <!--=================================================================================-->
 <script>
 
-import WordService from "../../Service";
+import Service from "../../Service";
 
 export default {
   name: "WordComponent",
@@ -187,13 +187,13 @@ export default {
           this.items[[c]].splice(0);
         }
       }
-      this.words = await WordService.findWords(this.checkChars);
+      this.words = await Service.findWords(this.checkChars);
       this.searched = true;
     }
   },
   async created() {
     try {
-      this.words = await WordService.findWords();
+      this.words = await Service.findWords();
     } catch (err) {
       this.error = err.message;
     }
@@ -206,6 +206,8 @@ export default {
 <style scoped>
 .word-container {
   width: 100vw;
+  min-height: 100vh;
+  height: auto;
   margin: 0;
   position: relative;
   left: 0;
@@ -217,8 +219,11 @@ export default {
   border-radius: 5px;}
 .no-border{
   border: none !important;
-  background: #4EA792 !important;
-}.gap{
+  background: #4EA792 !important;}
+.gap{
+  position: relative;
+  display: block;
+  top: 0;
   height: 200px;
   width: 100%;}
 .word-head {

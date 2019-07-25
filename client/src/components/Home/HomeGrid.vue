@@ -115,7 +115,7 @@
 
 		<h1 class="cCat cab cntrTxt drkGrey fw7 my-5 py-5">Most Recent Work</h1>
 
-		<b-col cols="10" lg="8" xl="5" class="card-col mb-5">
+		<b-col cols="10" lg="8" xl="7" class="card-col mb-5">
 			<router-link :to="Projects[0].link">
 				<project-card 
 						:url="Projects[0].url"

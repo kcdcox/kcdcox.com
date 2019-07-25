@@ -13,13 +13,13 @@ app.use('/api/matches', matches);
 
 //Relativator Routes
 const relativator = require('./routes/api/relationships');
-app.use('/api/relativator', relativator);
+app.use('/api/relationships', relativator); 
 
 //For Deployment Only
-//app.use(express.static(__dirname + '/public/'));
-//app.get(/.*/, (req, res) => res.sendFile(__direname + '/public/index.html'));
+app.use(express.static(__dirname + '/public/'));
+app.get(/.*/, (req, res) => res.sendFile(__direname + '/public/index.html'));
 
-app.listen(5003, () => console.log("Server listening on port 5003"));
+app.listen(5003, () => console.log("Server listening on port 5002"));
 
 
 

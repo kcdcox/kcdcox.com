@@ -12,10 +12,10 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.14",
     "jquery": "^3.3.1",
-    "vue": "^2.6.8",
-    "vue-router": "^3.0.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.7",
     "vue-slick": "^1.1.15",
-    "vue2-google-maps": "^0.10.6",
+    "vue2-google-maps": "^0.10.7",
     "vue2-smooth-scroll": "^1.0.5"
   },
   "devDependencies": {

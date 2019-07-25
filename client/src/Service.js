@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const findWordsURL = 'api/matches/';
-const relativatorURL = 'api/relativator/';
+const relativatorURL = 'api/relationships/';
 
 class Service {
 
@@ -15,10 +15,10 @@ class Service {
     }
 
     // Relativator
-    static relativitor(letters) {
+    static relativator(wordOne, wordTwo) {
         return axios.get(relativatorURL, {
             params: {
-                letters
+                wordOne, wordTwo
             }
         });
     }
