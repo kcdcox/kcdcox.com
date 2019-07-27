@@ -1,7 +1,7 @@
-node_modules
 .DS_Store
 kcdcox.code-workspace
 PrivateKeys.json
 .vscode
 ftp-kr.json
 ftp-kr.sync.cache.json
+server/public
