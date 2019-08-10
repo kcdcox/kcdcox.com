@@ -57,6 +57,7 @@
       </a>
     </div>
     <!--======================================================SCROLL-ARROW=======-->
+    <a href="#about" v-smooth-scroll>
     <div class="scrlArrowz">
       <img src="../../images/icons/dwnArrow-07.png" class="scrlAr" id="scrD1">
       <img src="../../images/icons/dwnArrow-07.png" class="scrlAr" id="scrD2">
@@ -65,7 +66,9 @@
     <div class="scrollWord">
       <h1 class="scrolley white cntrTxt cab fw7">SCROLL DOWN</h1>
     </div>
+    </a>
   </div>
+
 </template>
 <!--=================================================================================-->
 <!--=====================================================================SCRIPTS=====-->
