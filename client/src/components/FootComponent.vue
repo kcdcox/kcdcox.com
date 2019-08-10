@@ -42,32 +42,32 @@
 			<div class="conIconCont">
 				<div class="purpCircle">
 					<a href="https://www.linkedin.com/in/kcdcox">
-						<img src="../images/icons/contIconsG-03.png" class="ftIco">
-						<img src="../images/icons/contIconsW-03.png" class="ftIco ontop">
+						<img src="../images/icons/contIconsW-03.png" class="ftIco">
+					</a>
+				</div>
+
+				
+
+				<div class="purpCircle">
+					<a href="mailto:kcdcox@gmail.com?Subject=Hello" target="_top">
+						<img src="../images/icons/contIconsW-05.png" class="ftIco ">
 					</a>
 				</div>
 
 				<div class="purpCircle">
 					<a href="https://www.instagram.com/kcdcox/">
-						<img src="../images/icons/contIconsG-04.png" class="ftIco">
-						<img src="../images/icons/contIconsW-04.png" class="ftIco ontop">
+						<img src="../images/icons/contIconsW-04.png" class="ftIco">
 					</a>
 				</div>
 
-				<div class="purpCircle">
-					<a href="mailto:kcdcox@gmail.com?Subject=Hello" target="_top">
-						<img src="../images/icons/contIconsG-05.png" class="ftIco">
-						<img src="../images/icons/contIconsW-05.png" class="ftIco ontop">
-					</a>
-				</div>
 			</div>
 		
 		</b-row>
 		<!-- =================================================LOGO-DATE=============== -->
 		<b-row class="logoBox">
-			<img src="../images/logo/kclogoBWP.png" class="footLog">
-			<h3 class="mont fw7 fs14p black copyR">
-				Kevin Cox &#169; TwentyEighteen
+			<img src="../images/logo/kcdcoxlogo.png" class="footLog">
+			<h3 class="mont fw5 fs14p white copyR">
+				Kevin Cox &#169; TwentyNineteen
 			</h3>
 		</b-row>
 
@@ -93,6 +93,11 @@ Vue.use(BootstrapVue);
 export default {
 	name: 'FootComponent',
 	components: { GoogleMap },
+	data() {
+    return {
+			
+    };
+  },
 };
 </script>
 <!--=================================================================================-->
@@ -177,7 +182,7 @@ export default {
 	border-radius: 50px;
 	border: 2px solid white;
 	transition: background-color 0.5s ease;
-	background-color: #8961A0;}
+	background-color: #323232EE;}
 .purpCircle:hover { background-color: #4EA792;}
 .ftIco {
 	position: absolute;
@@ -197,6 +202,7 @@ export default {
 .footLog {
 	position: relative;
 	object-fit: contain;
+	opacity: 0.95;
 	width: 150px;
 	margin: 0 auto;
 	height: 80px;

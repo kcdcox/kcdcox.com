@@ -29,30 +29,30 @@
     <div class="bubbles" v-if="width>900">
       <a href="#top">
         <div class="bubble b1" title="Top" 
-					:style="{backgroundColor:(this.toBottom<0.2)?'#8961A0':'#BCBCBC99'}">
+					:style="{backgroundColor:(this.toBottom<0.25)?'#8961A0':'#BCBCBC99'}">
 				</div>
       </a>
       <a href="#about">
         <div class="bubble b2" title="About Me"
-				:style="{backgroundColor:(this.toBottom>=0.2&&
-					this.toBottom<0.3)?'#8961A0':'#BCBCBC99'}">
+				:style="{backgroundColor:(this.toBottom>=0.25&&
+					this.toBottom<0.5)?'#8961A0':'#BCBCBC99'}">
 				</div>
       </a>
       <a href="#dezdiz">
         <div class="bubble b3" title="Design & Development"
-					:style="{backgroundColor:(this.toBottom>=0.3&&
-						this.toBottom<0.5)?'#8961A0':'#BCBCBC99'}">
-				</div>
-      </a>
-      <a href="#recent-work">
-        <div class="bubble b4" title="Design & Development"
 					:style="{backgroundColor:(this.toBottom>=0.5&&
 						this.toBottom<0.7)?'#8961A0':'#BCBCBC99'}">
 				</div>
       </a>
+      <a href="#recent-work">
+        <div class="bubble b4" title="Design & Development"
+					:style="{backgroundColor:(this.toBottom>=0.7&&
+						this.toBottom<0.9)?'#8961A0':'#BCBCBC99'}">
+				</div>
+      </a>
       <a href="#footer">
         <div class="bubble b5" title="Bottom"
-					:style="{backgroundColor:(this.toBottom>=0.7)?'#8961A0':'#BCBCBC99'}">
+					:style="{backgroundColor:(this.toBottom>=0.9)?'#8961A0':'#BCBCBC99'}">
 				</div>
       </a>
     </div>
@@ -104,6 +104,8 @@ export default {
     handleResize() {
       this.width = window.innerWidth;
       this.height = window.innerHeight;
+      this.fromTop = window.scrollY;
+			this.toBottom = (this.fromTop)/(this.docH*3);
       this.forestH = Math.max(0.644 * this.width, this.height);
       this.forestW = Math.max(1.553 * this.height, this.width);
       this.forestL = (this.width - Math.max(this.height * 1.5529, this.width)) / 2;
@@ -113,7 +115,7 @@ export default {
     },
     onScroll() {
 			this.fromTop = window.scrollY;
-			this.toBottom = this.fromTop/this.docH;
+			this.toBottom = (this.fromTop)/(this.docH*3);
       this.tagTop = this.fromTop * -0.36;
       this.forestT = this.fromTop * -0.29;
       this.starsT = this.fromTop * -0.8;

@@ -235,8 +235,8 @@ h1, h2, h3, h4 {
 	left: 0px;
 	margin-top: 12vh;}
 .cat {
-	width: 50% ;
 	display: inline;
+  /* width: 50% ; */
 	font-size: 3rem;
   line-height: 3rem;}
 /*=====================CAROUSEL-RESPONSIVITY==========SM==*/

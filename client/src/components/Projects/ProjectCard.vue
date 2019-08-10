@@ -46,9 +46,9 @@ export default {
   background:white;
   border-radius: 5px !important;
   border: 1px solid #00000055;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden !important;}
-.card-div:hover{ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);}
+.card-div:hover{ box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.8);}
 .card-image{
   background: no-repeat center top;
   background-size: cover;
@@ -60,12 +60,13 @@ export default {
   overflow: hidden;
   width: 100%;
   bottom: 0px;
+  border-top: 2px solid #4EA792;
   left: 0;
-  background: white;
+  background: #323232;
   vertical-align: middle;
   height: auto;
   min-height: 35%;
   }
 .card-heading{color: #4EA792 !important;}
-.card-text{color: #000000EE !important;}
+.card-text{color: #FFF !important;}
 </style>

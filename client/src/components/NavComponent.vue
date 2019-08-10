@@ -26,13 +26,14 @@
         <li class="nav-item" 
           @click="navup=true"
           :class="{'nav-item-up': navup,'nav-item-down': !navup}">
+          <a href="#about">
           <router-link to="/#about"
             v-smooth-scroll
             @click="navup=!navup" 
             class="nav-link" 
             :style="{display: navLinks}">
             About
-          </router-link>
+          </router-link></a>
         </li>
         <li class="nav-item" 
           :class="{'nav-item-up': navup,'nav-item-down': !navup}"

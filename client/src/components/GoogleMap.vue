@@ -31,7 +31,7 @@ export default {
             "elementType": "labels.text.fill",
             "stylers": [
               {
-                "weight": 8
+                "weight": "20"
               }
             ]
           },
@@ -39,7 +39,7 @@ export default {
             "featureType": "landscape.man_made",
             "stylers": [
               {
-                "color": "CFA8D6"
+                "color": "FF6600"
               }
             ]
           },
@@ -57,7 +57,7 @@ export default {
             "elementType": "geometry.stroke",
             "stylers": [
               {
-                "color": "CFA8D6"
+                "color": "FF6600"
               },
               {
                 "weight": 3.5
@@ -68,7 +68,7 @@ export default {
             "featureType": "landscape.natural",
             "stylers": [
               {
-                "color": "#45EE9C"
+                "color": "#FFFFFF"
               }
             ]
           },
@@ -77,7 +77,7 @@ export default {
             "elementType": "geometry.fill",
             "stylers": [
               {
-                "color": "#7AE0A8"
+                "color": "#4EA792"
               }
             ]
           },
@@ -86,7 +86,7 @@ export default {
             "elementType": "geometry.stroke",
             "stylers": [
               {
-                "color": "#45EE9C"
+                "color": "#FFFFFF"
               }
             ]
           },
@@ -95,7 +95,7 @@ export default {
             "elementType": "geometry.fill",
             "stylers": [
               {
-                "color": "#EEE980"
+                "color": "#FFFFFF"
               }
             ]
           },
@@ -159,7 +159,7 @@ export default {
             "elementType": "geometry.fill",
             "stylers": [
               {
-                "color": "#8080EE"
+                "color": "#8961A0"
               },
               {
                 "visibility": "on"
@@ -171,7 +171,7 @@ export default {
             "elementType": "geometry.fill",
             "stylers": [
               {
-                "color": "#8F89F2"
+                "color": "#8961A0"
               }
             ]
           }

@@ -8,7 +8,7 @@
   {
     "url":"kcdcox-card",
     "title":"www.kcdcox.com",
-    "text":" This website acts as my my portfolio and reference--for freelance work. The front-end is built with HTML, CSS, Javascript, Bootstrap-Vue, and Vue.js, while the back-end is connected via Node.js and Express.js.",
+    "text":" This website acts as my my portfolio and reference--for freelance work. The front-end is built with HTML, CSS, Javascript, Bootstrap-Vue, and Vue.js, while the back-end is connected via Node.js and Express.js running on a DigitalOcean droplet.",
     "link":"/"
   }
  
