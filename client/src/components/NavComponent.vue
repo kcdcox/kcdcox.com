@@ -2,7 +2,7 @@
 
   <div class="nav-bar" 
     v-on:mouseleave="navup=true" 
-    :style="{height: (navup) ? '55px':'188px'}">
+    :style="{height: (navup) ? '55px':'225px'}">
 
     <router-link to="/">
       <img src="../images/logo/kclogoWGP.png" 
@@ -43,6 +43,17 @@
             class="nav-link" active-class="active" 
             :style="{display: navLinks}"> 
             Projects
+          </router-link>
+        </li>
+        <li class="nav-item" 
+          @click="navup=true"
+          :class="{'nav-item-up': navup,'nav-item-down': !navup}">
+          <router-link to="/blog"
+            v-smooth-scroll
+            @click="navup=!navup" 
+            class="nav-link" 
+            :style="{display: navLinks}">
+            Blog
           </router-link>
         </li>
         <li class="nav-item" 
@@ -207,8 +218,8 @@ export default {
   position: relative;
   display: inline-block;
   top: 11px;
+  width: 85px;
   left: 60px;
-  width: 90px;
   margin: 0;
   padding: 0;}
 .nav-item-down {
@@ -219,7 +230,7 @@ export default {
   left: -25px;
   width: 90px;
   margin: 10px;
-  padding: 0;}
+  padding: 5px;}
 .nav-link {
   display: inline-block;
   font-family: "Cabin", sans-serif;
@@ -229,7 +240,8 @@ export default {
   color: #ffffff;
   text-decoration: none;
   margin: 0;
-  padding: 0;}
+  padding: 0;
+  /* margin-right: 20px;} */}
 .nav-link:hover,
 .nav-link.active {
   opacity: 1;  

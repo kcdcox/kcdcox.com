@@ -46,8 +46,6 @@
 					</a>
 				</div>
 
-				
-
 				<div class="purpCircle">
 					<a href="mailto:kcdcox@gmail.com?Subject=Hello" target="_top">
 						<img src="../images/icons/contIconsW-05.png" class="ftIco ">

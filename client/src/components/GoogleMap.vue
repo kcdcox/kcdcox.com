@@ -159,7 +159,7 @@ export default {
             "elementType": "geometry.fill",
             "stylers": [
               {
-                "color": "#8961A0"
+                "color": "##8A648C"
               },
               {
                 "visibility": "on"
@@ -171,7 +171,7 @@ export default {
             "elementType": "geometry.fill",
             "stylers": [
               {
-                "color": "#8961A0"
+                "color": "#8A648C"
               }
             ]
           }

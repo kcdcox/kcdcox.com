@@ -1,5 +1,12 @@
 <template>
-  <b-container></b-container>
+  <b-container fluid id="blog">
+    <b-row>
+      <b-col>
+        
+      </b-col>
+    </b-row>
+
+  </b-container>
 </template>
 <!--=================================================================================-->
 <!--=====================================================================SCRIPTS=====-->
@@ -27,5 +34,16 @@ export default {
 <!--=====================================================================STYLING=====-->
 <!--=================================================================================-->
 <style>
+#blog{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+	z-index: 10;
+	top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible !important; 
+}
 
 </style>
